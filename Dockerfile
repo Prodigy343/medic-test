@@ -8,10 +8,10 @@ RUN apt-get install maven -y
 
 FROM openjdk:17-jdk-slim
 
-RUN ["mvn", "clean"]
-RUN ["mvn", "dependency:resolve"]
-RUN ["mvn", "verify"]
-RUN ["mvn", "package"]
+RUN mvn clean
+RUN mvn dependency:resolve
+RUN mvn verify
+RUN mvn package
 
 EXPOSE 8080
 
