@@ -12,6 +12,7 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 8080
 
+RUN ls -la /app
 COPY --from=build /app/medic-test/target/medic-test-1.jar medic-test-1.jar
 
 ENTRYPOINT ["java", "-jar", "medic-test-1.jar"]
