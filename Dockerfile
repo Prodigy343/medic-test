@@ -1,16 +1,16 @@
-FROM maven:3.8.4-openjdk-17 AS build
+FROM ubuntu:latest AS build
 
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
 WORKDIR /app
-
 COPY . .
 
-RUN mvn package -DskipTests
+RUN apt-get install maven -y
+RUN mvn package
 
 FROM openjdk:17-jdk-slim
 
 EXPOSE 8080
-
-WORKDIR /app
 
 COPY --from=build /app/medic-test/target/medic-test-1.jar medic-test-1.jar
 
