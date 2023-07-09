@@ -13,4 +13,4 @@ EXPOSE 8080
 
 COPY --from=build /medic-test/target/medic-test-1.jar medic-test-1.jar
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "medic-test-1.jar"]
