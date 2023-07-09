@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.medic-test</groupId>
 	<artifactId>medic-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>Medic Test</name>
 	<description>Api Medic App</description>
 	<properties>
